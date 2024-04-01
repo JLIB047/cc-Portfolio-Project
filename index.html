@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/index.css"/>
     <title>Jason Libertelli</title>
 </head>
 <body>
     <header>
         <h1>Jason Libertelli : Full Stack Developer</h1>
-        <nav class="nav-bar">
+        <div class="dropdown">
+            <button onclick="dropDown()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="resume.html">Resume</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#aboutMe">About Me</a>
+            </div>
+        </div>
+        <!--<nav class="nav-bar">
             <ul class="nav-list">
                 <li class="nav-item"><a href='resume.html'>Resume</a></li>
                 <li class="nav-item"><a href='#projects'>Projects</a></li>
                 <li class="nav-item"><a href='#contact'>Contact</a></li>
                 <li class="nav-item"><a href='#aboutMe'>About Me</a></li>
             </ul>
-        </nav>
+        </nav>-->
     </header>
 
     <main class="main-info">
@@ -43,4 +53,25 @@
     </footer>
 
 </body>
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropDown() {
+    document.getElementById("myDropdown").classList.toggle('show'); 
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if(!event.target.matches('.dropbtn')){
+        var dropdowns = document.getElementsByClassName('dropdown-content'); 
+        var i; 
+        for(i = 0; i < dropdowns.length; i++){
+            var openDropdown = dropdowns[i]; 
+            if(openDropdown.classList.contains('show')){
+                openDropdown.classList.remove('show'); 
+            }
+        }
+    }
+};
+</script>
 </html>

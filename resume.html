@@ -8,9 +8,47 @@
     <title>Jason Libertelli: Resume</title>
 </head>
 <body>
-    <img src="/documents/Jason Libertelli CV (03-29-2024).pdf" alt="jason's resume" class="resume"/>
+    <header>
+        <h1>Jason Libertelli : Full Stack Developer</h1>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button onclick="dropDown()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#aboutMe">About Me</a>
+                </div>
+            </div>
+        </div>    
+    </header>
+
+    <section class='cv'>
+    <img src="/documents/Jason Libertelli CV (03-29-2024).jpg" alt="jason's resume" class="resume"/>
     <br>
-    <button class="btn"><i class='fa fa-download'>Download</i></button>
-    
+    <button class="download-btn"><i class='fa fa-download'><a href='documents/Jason Libertelli CV (03-29-2024).jpg' download>Download</a></i></button>
+    </section>
 </body>
+<script>
+    function dropDown() {
+    document.getElementById("myDropdown").classList.toggle('show'); 
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if(!event.target.matches('.dropbtn')){
+        var dropdowns = document.getElementsByClassName('dropdown-content'); 
+        var i; 
+        for(i = 0; i < dropdowns.length; i++){
+            var openDropdown = dropdowns[i]; 
+            if(openDropdown.classList.contains('show')){
+                openDropdown.classList.remove('show'); 
+            }
+        }
+    }
+};
+
+
+</script>
 </html>

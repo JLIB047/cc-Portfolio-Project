@@ -6,6 +6,7 @@ body {
 header{ 
     background-color: #333;
     padding-top: 50px;
+    margin: auto;
 }
 
 h1 {
@@ -18,22 +19,22 @@ h1 {
     text-align: center; 
     background-color: #333; 
     margin: 20px;
-    padding: 0 0 100px 0; 
+    padding: 0 0 auto 0; 
+    overflow: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .portfolio-img {
-    padding: 50px
-    
+    width: 100%;
+    height: auto;
 }
 
 .cover-letter{
-    width: 350px; 
-    height: auto;
     color: white; 
-    padding: 50px;
+    width: 100%; 
+    height: auto;
 }
 
 #skills-container{
@@ -125,4 +126,14 @@ footer{
 
 .show {display:block}; 
 
+@media only screen and (max-width:320px){
+    header{
+        padding-right: auto;
+    }
 
+    .main-info{ 
+        flex-direction: column;
+    }
+
+    
+}

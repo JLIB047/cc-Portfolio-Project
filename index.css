@@ -3,27 +3,27 @@ body {
     background-color: #04AA6D;
 }
 
-header{ 
+header{
     background-color: #333;
     padding-top: 50px;
     margin: auto;
 }
 
 h1 {
+    display: flex; 
+    justify-content: center;
     color: white; 
     background: #333; 
-    text-align: center; 
 }
 
-.main-info {
-    text-align: center; 
+.main-info { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: #333; 
     margin: 20px;
     padding: 0 0 auto 0; 
     overflow: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .portfolio-img {
@@ -44,7 +44,6 @@ h1 {
     display: flex; 
     justify-content: space-around;
     font-size: 20px;
-    text-align: justify;
     border-radius: 25px;
     padding: 10px;
 }
@@ -58,9 +57,10 @@ footer{
 }
 
 .cv {
-    display: block; 
-    text-align: center;
-    padding-top: 20px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
 }
 
 .resume {
@@ -126,14 +126,8 @@ footer{
 
 .show {display:block}; 
 
-@media only screen and (max-width:320px){
-    header{
-        padding-right: auto;
-    }
-
-    .main-info{ 
+@media only screen and (max-width: 320px){
+    .main-info{
         flex-direction: column;
     }
-
-    
 }
